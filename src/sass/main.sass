@@ -1,0 +1,77 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+// main.sass
+
+@import "../../plugins/neat/neat"
+@import "variables"
+
+// general elements
+body
+  font-family: $font-family-text
+  line-height: 1.4em
+  background: $background-color
+
+h1
+  font-family: $font-family-heading
+  font-size: 5em
+  text-transform: uppercase
+
+a
+  cursor: pointer
+
+footer
+  position: absolute
+  bottom: 1%
+
+
+//structural elements
+.container
+  @inlcude outer-container()
+.row
+  @include grid-column(12)
+.descr-text-column
+  @media(min-width: 768px)
+    @include grid-column(6 of 12)
+
+.header-column
+  @media(min-width: 768px)
+    @include grid-column(6 of 12)
+    @include grid-shift(6)
+
+//essentials
+.philipdrozd
+  font-family: $font-family-heading
+  font-size: 1.4em
+  display: inline
+  @media(min-width: 768px)
+    position: absolute
+    top: 10%
+    left: -3%
+    -ms-transform: rotate(90deg)
+    -webkit-transform: rotate(90deg)
+    transform: rotate(90deg)
+nav
+  float: right
+  text-align: right
+  ul
+    display: inline-block
+    margin-top: 0
+    li
+      list-style-type: none
+      font-size: 1.6em
+      @media(min-width: 768px)
+        font-size: 1.3em
+.mail
+  font-family: $font-family-heading
+  font-size: 1.4em
+  @media(min-width: 768px)
+    position: absolute
+    bottom: 20%
+    right: -6%
+    -ms-transform: rotate(-90deg)
+    -webkit-transform: rotate(-90deg)
+    transform: rotate(-90deg)
+
+//muse.html
+.sub-inspiration
+  font-size: 1.07em
+  margin-top: -3%

@@ -1,0 +1,78 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+body {
+  font-family: Fira Mono;
+  line-height: 1.4em;
+  background: white; }
+
+h1 {
+  font-family: Questrial;
+  font-size: 5em;
+  text-transform: uppercase; }
+
+a {
+  cursor: pointer; }
+
+footer {
+  position: absolute;
+  bottom: 1%; }
+
+.container {
+  @inlcude outer-container(); }
+
+.row {
+  width: calc(100% - 40px);
+  float: left;
+  margin-left: 20px; }
+
+@media(min-width: 768px) {
+  .descr-text-column {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px; } }
+@media(min-width: 768px) {
+  .header-column {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+    left: calc(50% - 30px + 20px);
+    position: relative; } }
+.philipdrozd {
+  font-family: Questrial;
+  font-size: 1.4em;
+  display: inline; }
+@media(min-width: 768px) {
+  .philipdrozd {
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); } }
+nav {
+  float: right;
+  text-align: right; }
+  nav ul {
+    display: inline-block;
+    margin-top: 0; }
+    nav ul li {
+      list-style-type: none;
+      font-size: 1.6em; }
+@media(min-width: 768px) {
+  nav ul li {
+    font-size: 1.3em; } }
+.mail {
+  font-family: Questrial;
+  font-size: 1.4em; }
+@media(min-width: 768px) {
+  .mail {
+    position: absolute;
+    bottom: 20%;
+    right: -6%;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
+.sub-inspiration {
+  font-size: 1.07em;
+  margin-top: -3%; }
+
+/*# sourceMappingURL=styles.css.map */
