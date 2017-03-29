@@ -31,7 +31,7 @@ module.exports = (grunt) ->
             cwd: '<%= dirs.src.base %>/'
             dest: '<%= dirs.target.base %>/'
             expand: true
-            src: ['**/*.html', '**/*.php']
+            src: ['**/*.html', 'php/*.php']
         ]
     dirs:
       src:

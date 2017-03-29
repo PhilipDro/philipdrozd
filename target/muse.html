@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Questrial" rel="stylesheet">
 
     <link href="css/styles.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
-  <body onload="getElements('muse')">
+  <body onload="getElements()">
 
     <div class="container">
       <div class="philipdrozd">Philip Drozd</div>
@@ -25,23 +26,30 @@
       <div class="row">
         <div class="header-column">
           <h1>Inspiration</h1>
-          <p class="sub-inspiration">Photography • Graphic Design • Art • UI • Stuff</p>
+          <p class="sub-inspiration">UI • Graphic Design • Art • Photography • Stuff</p>
         </div>
       </div>
       <div class="row">
         <div class="descr-text-column">
-          <p>I am a web developer living in Berlin. Currently I am working on a clients website using Angular 2.
-          To see what else I am involved in right now, check out my <a href="blog.html">blog</a>.</p>
-          <p>Available for client work at the moment and always seeking for collaborations with other creative workers.</p>
-          <p><a href="mailto:me@philipdrozd.com">Get in touch</a></p>
+          <p>
+            Browsing the internet seldom turns out to be helping
+            productivity and is often times just <a href="https://giphy.com/gifs/cat-cute-share-KijmmcKP62qWs" target="blank">distracting</a> us from
+            what we wanted to do.
+          </p>
+
+          <p>
+            However it can also serve as a great source of inspiration and
+            kick off new ideas. Here is some of the stuff that I find inspiring.
+          </p>
+          <p>
+            I tried to reference the source as accurate as possible.
         </div>
       </div>
+      <div id="inspiration-list"></div>
     </div>
 
 
     <div class="mail">me@philipdrozd.com</div>
-    <footer>© Copyright 2017</footer>
-    <script src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
