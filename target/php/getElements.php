@@ -11,8 +11,8 @@
     $description = utf8_encode(nl2br($row['description']));
     $link = utf8_encode(nl2br($row['link']));
     $imgPath = $row['src'];
-    if (!$imgPath && file_exists("../images/muse/" . $id . ".jpg")) {
-      $imgPath = "images/muse/" . $id . ".jpg";
+    if (!$imgPath && file_exists("../images/" . $input . '/' . $id . ".jpg")) {
+      $imgPath = "images/" . $input . '/' . $id . ".jpg";
     }
 
     include 'outputElements.php';

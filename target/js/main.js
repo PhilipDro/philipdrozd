@@ -1,20 +1,34 @@
 (function() {
-  this.getElements = function() {
+  this.getElements = function(input) {
     var x;
     x = 0;
     $.ajax({
       url: 'php/getElements.php',
       type: 'POST',
       dataType: 'text',
+      data: {
+        input: input
+      },
       complete: function(r) {
-        $('#inspiration-list').html(r.responseText);
+        $('#output-list').html(r.responseText);
         $('.element').each(function() {
           var maxWidth, maxWidthString, top, topString;
-          top = Math.floor(Math.random() * 20) + 8;
+          if (x === 0) {
+            top = 0;
+          } else if (input === 'work') {
+            top = Math.floor(Math.random() * 8) + 2;
+          } else {
+            top = Math.floor(Math.random() * 20) + 8;
+          }
           topString = top + 'em';
-          maxWidth = Math.floor(Math.random() * 40) + 25;
+          if (x === 0) {
+            maxWidth = 40;
+          } else if (input === 'work') {
+            maxWidth = Math.floor(Math.random() * 28) + 20;
+          } else {
+            maxWidth = Math.floor(Math.random() * 40) + 25;
+          }
           maxWidthString = maxWidth + '%';
-          x = x + 1;
           if (x % 2 === 0) {
             $(this).css({
               'float': 'right'
@@ -28,9 +42,16 @@
             'top': topString,
             'max-width': maxWidthString
           });
+          x = x + 1;
         });
       }
     });
   };
+
+  $(document).ready(function() {
+    $('#nerd-info-plus').click(function() {
+      $('.nerd-info').toggle();
+    });
+  });
 
 }).call(this);

@@ -9,7 +9,7 @@
 
     <link href="css/styles.css" rel="stylesheet"/>
   </head>
-  <body>
+  <body onload="getElements('work')">
 
     <div class="container">
       <div class="philipdrozd">Philip Drozd</div>
@@ -29,14 +29,23 @@
       </div>
       <div class="row">
         <div class="descr-text-column">
-          <p>I am a web developer living in Berlin. Currently I am working on a clients website using Angular 2.
-          To see what else I am involved in right now, check out my <a href="blog.html">blog</a>.</p>
-          <p>Available for client work at the moment and always seeking for collaborations with other creative workers.</p>
-          <p><a href="mailto:me@philipdrozd.com">Get in touch</a></p>
+          <strong>Working as a web developer I craft websites and apps.</strong>
+          <p>Nerd info <span id="nerd-info-plus" class="link">+</a></span>
+          <p class="nerd-info">
+            HTML5, CSS3, Javascript (jQuery, AJAX), PHP, MySql, Typescript,
+            Angular 2, Bootstrap
+          </p>
+          <p>Get in touch if you need a home page, an online shop, a web app or whatever website it is.</p>
+          <p><a href="mailto:me@philipdrozd.com">me@philipdrozd.com</a></p>
+          <p>Please no Wordpress requests.</p>
         </div>
       </div>
+      <div id="output-list"></div>
     </div>
 
     <div class="mail">me@philipdrozd.com</div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

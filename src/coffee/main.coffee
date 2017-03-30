@@ -1,29 +1,37 @@
 #main.coffee
 
-@getElements = ->
+
+@getElements = (input) ->
   x = 0
   $.ajax(
     url: 'php/getElements.php'
     type: 'POST'
     dataType: 'text'
+    data:
+      input: input
     complete: (r)->
-      $('#inspiration-list').html(r.responseText)
+      $('#output-list').html(r.responseText)
       $('.element').each ->
-        top = Math.floor(Math.random() * 20) + 8
+        #top variation
+        if(x == 0)
+          top = 0
+        else if(input == 'work')
+          top = Math.floor(Math.random() * 8) + 2
+        else
+          top = Math.floor(Math.random() * 20) + 8
+
         topString = top + 'em'
 
-        #offsetRandom = Math.floor(Math.random() * 3) + 1
+        #size variation
 
-        maxWidth = Math.floor(Math.random() * 40) + 25
+        if(x == 0)
+          maxWidth = 40
+        else if(input == 'work')
+          maxWidth = Math.floor(Math.random() * 28) + 20
+        else
+          maxWidth = Math.floor(Math.random() * 40) + 25
         maxWidthString = maxWidth + '%'
 
-        #if(offsetRandom == 1)
-        #  offset = 0
-        #else
-        #  offset = 0
-        #offsetString = offset + 'em'
-
-        x = x + 1
         if(x % 2 == 0)
           $(this).css({'float': 'right'})
         #else if(x % 3 == 0)
@@ -31,7 +39,15 @@
         else
           $(this).css({'float': 'left'})
         $(this).css({'top': topString, 'max-width': maxWidthString})
+
+        x = x + 1
         return
       return
     )
+  return
+
+$(document).ready ->
+  $('#nerd-info-plus').click ->
+    $('.nerd-info').toggle()
+    return
   return

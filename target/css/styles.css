@@ -16,6 +16,9 @@ footer {
   position: absolute;
   bottom: 1%; }
 
+.link {
+  color: #0000EE; }
+
 .container {
   @inlcude outer-container(); }
 
@@ -75,6 +78,14 @@ nav {
   font-size: 1.07em;
   margin-top: -3%; }
 
+.nerd-info {
+  display: none;
+  color: red; }
+
+#nerd-info-plus {
+  cursor: pointer;
+  text-decoration: underline; }
+
 .element {
   display: inline-block;
   max-width: 33%;
@@ -89,5 +100,8 @@ nav {
     min-width: 30%; }
   .element .name {
     display: inline; }
+
+.element-inner {
+  border: 1px solid #D8D8D8; }
 
 /*# sourceMappingURL=styles.css.map */
