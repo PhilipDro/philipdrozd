@@ -4,7 +4,7 @@
       <div class='element-inner'>
         <a href='$link' target='blank'>
           <img src='$imgPath' /><br />
-          <!--p class='name'>$name</p-->
+          <p class='name'>$name</p>
         </a>
       </div>
     </div>

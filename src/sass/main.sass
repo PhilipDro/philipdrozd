@@ -63,6 +63,12 @@ nav
       font-size: 1.6em
       @media(min-width: 768px)
         font-size: 1.3em
+      a
+        text-decoration: none
+        line-height: 1.4em
+
+        &.active
+          text-decoration: underline
 .mail
   font-family: $font-family-heading
   font-size: 1.4em
@@ -104,6 +110,15 @@ nav
     min-width: 30%
   .name
     display: inline
+    position: absolute
+    top: 10%
+    right: 0
+    font-size: 1.4em
+    font-weight: bold
+    color: black
+    transform: translateX(40%)
+    text-decoration: underline
+
 
 .element-inner
   border: 1px solid #D8D8D8

@@ -63,6 +63,12 @@ nav {
 @media(min-width: 768px) {
   nav ul li {
     font-size: 1.3em; } }
+      nav ul li a {
+        text-decoration: none;
+        line-height: 1.4em; }
+        nav ul li a.active {
+          text-decoration: underline; }
+
 .mail {
   font-family: Questrial;
   font-size: 1.4em; }
@@ -99,7 +105,15 @@ nav {
     display: inline;
     min-width: 30%; }
   .element .name {
-    display: inline; }
+    display: inline;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: black;
+    transform: translateX(40%);
+    text-decoration: underline; }
 
 .element-inner {
   border: 1px solid #D8D8D8; }

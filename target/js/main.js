@@ -24,7 +24,7 @@
           if (x === 0) {
             maxWidth = 40;
           } else if (input === 'work') {
-            maxWidth = Math.floor(Math.random() * 28) + 20;
+            maxWidth = Math.floor(Math.random() * 28) + 23;
           } else {
             maxWidth = Math.floor(Math.random() * 40) + 25;
           }
@@ -32,6 +32,13 @@
           if (x % 2 === 0) {
             $(this).css({
               'float': 'right'
+            });
+            $(this).find('.name').css({
+              'bottom': '10%',
+              'top': 'auto',
+              'left': '0',
+              'right': 'auto',
+              'transform': 'translateX(-50%)'
             });
           } else {
             $(this).css({
