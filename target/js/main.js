@@ -12,44 +12,55 @@
       complete: function(r) {
         $('#output-list').html(r.responseText);
         $('.element').each(function() {
-          var maxWidth, maxWidthString, top, topString;
-          if (x === 0) {
-            top = 0;
-          } else if (input === 'work') {
-            top = Math.floor(Math.random() * 8) + 2;
+          var maxWidth, maxWidthString, minWidth, minWidthString, top, topString;
+          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
           } else {
-            top = Math.floor(Math.random() * 20) + 8;
-          }
-          topString = top + 'em';
-          if (x === 0) {
-            maxWidth = 40;
-          } else if (input === 'work') {
-            maxWidth = Math.floor(Math.random() * 28) + 23;
-          } else {
-            maxWidth = Math.floor(Math.random() * 40) + 25;
-          }
-          maxWidthString = maxWidth + '%';
-          if (x % 2 === 0) {
+            if (x === 0) {
+              top = 0;
+            } else if (input === 'work') {
+              top = Math.floor(Math.random() * 8) + 2;
+            } else {
+              top = Math.floor(Math.random() * 20) + 8;
+            }
+            topString = top + 'em';
+            if (x === 0) {
+              maxWidth = 40;
+            } else if (input === 'work') {
+              maxWidth = Math.floor(Math.random() * 28) + (minWidth = 23);
+            } else {
+              maxWidth = Math.floor(Math.random() * 40) + (minWidth = 25);
+            }
+            maxWidthString = maxWidth + '%';
+            minWidthString = minWidth + '%';
+            if (x % 2 === 0) {
+              $(this).css({
+                'float': 'right'
+              });
+              $(this).find('.name').css({
+                'bottom': '10%',
+                'top': 'auto',
+                'left': '0',
+                'right': 'auto',
+                'transform': 'translateX(-50%)'
+              });
+            } else {
+              $(this).css({
+                'float': 'left'
+              });
+            }
             $(this).css({
-              'float': 'right'
+              'top': topString,
+              'max-width': maxWidthString,
+              'min-width': minWidthString
             });
-            $(this).find('.name').css({
-              'bottom': '10%',
-              'top': 'auto',
-              'left': '0',
-              'right': 'auto',
-              'transform': 'translateX(-50%)'
-            });
-          } else {
-            $(this).css({
-              'float': 'left'
-            });
+            x = x + 1;
           }
-          $(this).css({
-            'top': topString,
-            'max-width': maxWidthString
-          });
-          x = x + 1;
+        });
+        $('img.lazy').lazyload({
+          effect: 'fadeIn',
+          effectspeed: 900,
+          threshold: 150
         });
       }
     });

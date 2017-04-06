@@ -19,6 +19,15 @@ footer {
 .link {
   color: #0000EE; }
 
+@media(max-width: 768px) {
+  .hide-xs {
+    display: none; } }
+@media(max-width: 992px) and (min-width: 768px) {
+  .hide-sm {
+    display: none; } }
+@media(min-width: 992px) {
+  .hide-lg {
+    display: none; } }
 .container {
   @inlcude outer-container(); }
 
@@ -94,28 +103,32 @@ nav {
 
 .element {
   display: inline-block;
-  max-width: 33%;
-  border: 2em solid white;
-  margin: 3%;
-  position: relative; }
+  position: relative;
+  margin: 5%; }
+@media(min-width: 768px) {
+  .element {
+    margin: 3%;
+    border: 2em solid white;
+    max-width: 33%; } }
   .element a:hover img {
     opacity: 0.7; }
   .element img {
     width: 100%;
     display: inline;
-    min-width: 30%; }
+    min-width: 30%;
+    border: 1px solid #D8D8D8; }
+  .element .name {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline; }
+@media(min-width: 768px) {
   .element .name {
     display: inline;
     position: absolute;
     top: 10%;
     right: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    color: black;
-    transform: translateX(40%);
-    text-decoration: underline; }
-
-.element-inner {
-  border: 1px solid #D8D8D8; }
+    transform: translateX(40%); } }
 
 /*# sourceMappingURL=styles.css.map */

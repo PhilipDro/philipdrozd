@@ -25,6 +25,15 @@ footer
 .link
   color: #0000EE
 
+.hide-xs
+  @media(max-width: 768px)
+    display: none
+.hide-sm
+  @media(max-width: 992px) and (min-width: 768px)
+    display: none
+.hide-lg
+  @media(min-width: 992px)
+    display: none
 
 //structural elements
 .container
@@ -96,10 +105,13 @@ nav
 //element
 .element
   display: inline-block
-  max-width: 33%
-  border: 2em solid white
-  margin: 3%
   position: relative
+  margin: 5%
+  @media(min-width: 768px)
+    margin: 3%
+    border: 2em solid white
+    max-width: 33%
+
 
   a:hover img
     opacity: 0.7
@@ -108,17 +120,17 @@ nav
     width: 100%
     display: inline
     min-width: 30%
+    border: 1px solid #D8D8D8
   .name
-    display: inline
-    position: absolute
-    top: 10%
-    right: 0
+    display: block
     font-size: 1.4em
     font-weight: bold
     color: black
-    transform: translateX(40%)
     text-decoration: underline
 
-
-.element-inner
-  border: 1px solid #D8D8D8
+    @media(min-width: 768px)
+      display: inline
+      position: absolute
+      top: 10%
+      right: 0
+      transform: translateX(40%)

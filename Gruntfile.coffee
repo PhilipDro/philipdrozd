@@ -17,6 +17,7 @@ module.exports = (grunt) ->
           '<%= dirs.target.js %>/scripts.js': [
             '<%= dirs.target.js %>/main.js'
             '<%= dirs.target.js %>/motivation-list.js'
+            '/var/www/html/philipdrozd/plugins/lazyload/jquery.lazyload.js'
           ]
     copy:
       deploy:
@@ -34,6 +35,9 @@ module.exports = (grunt) ->
             src: ['**/*.html', 'php/*.php']
         ]
     dirs:
+      plugins:
+        base: 'plugins'
+        lazyload: '<%= dirs.plugins.base %>/lazyload'
       src:
         base: 'src'
         coffee: '<%= dirs.src.base %>/coffee'
