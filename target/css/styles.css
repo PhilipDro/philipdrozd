@@ -2,7 +2,7 @@
 body {
   font-family: Fira Mono;
   line-height: 1.4em;
-  background: white; }
+  background: #fff; }
 
 h1 {
   font-family: Questrial;
@@ -108,7 +108,7 @@ nav {
 @media(min-width: 768px) {
   .element {
     margin: 3%;
-    border: 2em solid white;
+    border: 2em solid #fff;
     max-width: 33%; } }
   .element a:hover img {
     opacity: 0.7; }

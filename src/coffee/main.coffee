@@ -14,7 +14,7 @@
 
         #if mobile
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
-        
+
         else
           #top variation
           if(x == 0)
@@ -36,7 +36,6 @@
           maxWidthString = maxWidth + '%'
           minWidthString = minWidth + '%'
 
-
           if(x % 2 == 0)
             $(this).css({'float': 'right'})
             $(this).find('.name').css({'bottom': '10%','top': 'auto', 'left': '0', 'right': 'auto', 'transform': 'translateX(-50%)'})
@@ -44,9 +43,6 @@
             $(this).css({'float': 'left'})
             #$(this).find('.name').css({topOrBottom: '10%'})
           $(this).css({'top': topString, 'max-width': maxWidthString, 'min-width': minWidthString})
-
-
-
 
           x = x + 1
         return
