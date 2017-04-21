@@ -59,7 +59,7 @@
         });
         $('img.lazy').lazyload({
           effect: 'fadeIn',
-          effectspeed: 900,
+          effectspeed: 500,
           threshold: 150
         });
       }

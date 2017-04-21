@@ -46,7 +46,7 @@
 
           x = x + 1
         return
-      $('img.lazy').lazyload effect: 'fadeIn', effectspeed: 900, threshold : 150
+      $('img.lazy').lazyload effect: 'fadeIn', effectspeed: 500, threshold : 150
       return
     )
   return
