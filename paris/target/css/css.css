@@ -1,0 +1,68 @@
+.btn-outline-primary {
+  color: #007bff!important;
+}
+.btn-outline-primary:hover {
+  color: #fff!important;
+}
+.text-center {
+  text-align: center;
+}
+.blog-header {
+  padding-bottom: 24px;
+}
+.blog-header-logo {
+  position: relative;
+  top: 15px;
+}
+.blog-header-logo h1 {
+  font-size: 34px;
+  margin-bottom: 0;
+}
+.blog-header-logo-subheader {
+  font-size: 15px;
+  font-family: "Questrial";
+  letter-spacing: 2px;
+}
+
+.jumbotron .text-center h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.jumbotron p {
+  font-weight: 300;
+}
+
+.logo {
+  max-height: 45px;
+  width: auto;
+  position: relative;
+  top: 10px;
+}
+.logo-bydrozd {
+  opacity: .7;
+}
+.logo-footer {
+  top: 0;
+}
+.logo-paris {
+  max-height: 65px;
+}
+
+.text-red {
+  color: #d63031 !important;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.card-img-top {
+  max-height: 180px;
+}
+.capital {
+  text-transform: uppercase;
+}

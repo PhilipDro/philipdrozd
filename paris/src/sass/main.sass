@@ -1,0 +1,138 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+// main.sass
+
+@import "../../plugins/neat/neat"
+@import "variables"
+
+// general elements
+body
+  font-family: $font-family-text
+  line-height: 1.4em
+  background: $background-color
+
+h1
+  font-family: $font-family-heading
+  font-size: 5em
+  text-transform: uppercase
+  //color: $highlight-color
+p
+  //color: white
+a
+  cursor: pointer
+
+footer
+  position: absolute
+  bottom: 1%
+
+.link
+  color: #0000EE
+
+.hide-xs
+  @media(max-width: 768px)
+    display: none
+.hide-sm
+  @media(max-width: 992px) and (min-width: 768px)
+    display: none
+.hide-lg
+  @media(min-width: 992px)
+    display: none
+
+//structural elements
+.container
+  @inlcude outer-container()
+.row
+  @include grid-column(12)
+.descr-text-column
+  @media(min-width: 768px)
+    @include grid-column(6 of 12)
+
+.header-column
+  @media(min-width: 768px)
+    @include grid-column(6 of 12)
+    @include grid-shift(6)
+
+//essentials
+.philipdrozd
+  font-family: $font-family-heading
+  font-size: 1.4em
+  display: inline
+  @media(min-width: 768px)
+    position: absolute
+    top: 10%
+    left: -3%
+    -ms-transform: rotate(90deg)
+    -webkit-transform: rotate(90deg)
+    transform: rotate(90deg)
+nav
+  float: right
+  text-align: right
+  ul
+    display: inline-block
+    margin-top: 0
+    li
+      list-style-type: none
+      font-size: 1.6em
+      @media(min-width: 768px)
+        font-size: 1.3em
+      a
+        text-decoration: none
+        line-height: 1.4em
+
+        &.active
+          text-decoration: underline
+.mail
+  font-family: $font-family-heading
+  font-size: 1.4em
+  @media(min-width: 768px)
+    position: absolute
+    bottom: 20%
+    right: -6%
+    -ms-transform: rotate(-90deg)
+    -webkit-transform: rotate(-90deg)
+    transform: rotate(-90deg)
+
+//muse.html
+.sub-inspiration
+  font-size: 1.07em
+  margin-top: -3%
+
+//work.html
+.nerd-info
+  display: none
+  color: red
+#nerd-info-plus
+  cursor: pointer
+  text-decoration: underline
+
+//element
+.element
+  display: inline-block
+  position: relative
+  margin: 5%
+  @media(min-width: 768px)
+    margin: 3%
+    border: 2em solid $background-color
+    max-width: 33%
+
+
+  a:hover img
+    opacity: 0.7
+
+  img
+    width: 100%
+    display: inline
+    min-width: 30%
+    border: 1px solid #D8D8D8
+  .name
+    display: block
+    font-size: 1.4em
+    font-weight: bold
+    color: black
+    text-decoration: underline
+
+    @media(min-width: 768px)
+      display: inline
+      position: absolute
+      top: 10%
+      right: 0
+      transform: translateX(40%)

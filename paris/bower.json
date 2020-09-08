@@ -1,0 +1,24 @@
+{
+  "name": "philipdrozd",
+  "version": "0.9.0",
+  "authors": [
+    "Philip Drozd <me@philipdrozd.com>"
+  ],
+  "description": "Philip",
+  "keywords": [
+    "website",
+    "Philip"
+  ],
+  "homepage": "http://philipdrozd.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "target"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "4.4.0"
+  }
+}
